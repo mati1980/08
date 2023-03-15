@@ -4,14 +4,14 @@
 <header>
   <nav class="navbar">
     <a href="index.html">
-      <img src="../svg/logo.svg" alt="logo" />
+      <img class="logo" src="../svg/logo.svg" alt="logo" />
     </a>
     <ul>
       <li><a class="nav_item" href="src/pages/program.astro">Program</a></li>
       <li><a class="nav_item" href="src/pages/booths.astro">Booths</a></li>
     </ul>
     <div class="nav_right">
-      <a href="src/pages/favoritter.astro"> <i class="fa-solid fa-heart fa-2xl"></i></a>
+      <a href="src/pages/favoritter.astro"> <i class="fa-solid fa-heart fa-3x"></i></a>
       <ul class="nav_menu">
         <li><a class="nav_item" href="src/pages/program.astro">Program</a></li>
         <li><a class="nav_item" href="src/pages/booths.astro">Booths</a></li>
@@ -27,14 +27,63 @@
       </div>
     </div>
   </nav>
+
+  <h3 class="flip flip_left">Copenhagen Sakura Festival</h3>
+  <h3 class="flip flip_right">22th - 23th of april 2023 in Langelinie Park</h3>
 </header>
 
 <style>
   .fa-heart {
-    color: var(--primary-100);
+    display: none;
   }
+  @media (min-width: 1000px) {
+    .fa-heart {
+      display: block;
+      color: var(--primary-80);
+    }
+    .fa-heart:hover {
+      color: var(--tertiary-100);
+    }
+  }
+
+  /***FLIP ***/
+  .flip {
+    display: none;
+  }
+  @media (min-width: 1000px) {
+    .flip_left {
+      transform: rotate(-90deg) translate(-100%, 2rem);
+      transform-origin: top left;
+    }
+    .flip_right {
+      transform: rotate(90deg) translate(100%, 2rem);
+      transform-origin: top right;
+      right: 0;
+    }
+    .flip {
+      display: block;
+      position: fixed;
+      width: 80vh;
+      text-align: center;
+      font-size: var(--font-size-s);
+      font-weight: var(--light);
+    }
+  }
+
   /***** MENU *****/
 
+  .logo {
+    width: 80px;
+    margin-top: 5px;
+  }
+  @media (min-width: 1000px) {
+    .logo {
+      width: 100px;
+    }
+    .logo:hover {
+      transform: rotate(10deg);
+    }
+  }
   .nav_right {
     display: flex;
     align-items: center;
@@ -45,7 +94,7 @@
   }
 
   nav ul {
-    display: flex;
+    display: none;
     flex-direction: row;
     list-style: none;
   }
@@ -59,11 +108,26 @@
     color: var(--primary-100);
   }
 
+  a:hover {
+    color: var(--tertiary-100);
+  }
+  @media (min-width: 1000px) {
+    nav ul {
+      display: flex;
+    }
+  }
   .navbar {
-    margin: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  @media (min-width: 1000px) {
+    .navbar {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
   }
 
   .nav_menu {
@@ -77,20 +141,21 @@
 
   .bar {
     display: block;
-    height: 1.5px;
-    margin: 10px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    height: 2px;
+    margin: 15px auto;
     background-color: var(--primary-100);
     border-radius: 5px;
   }
+
   .bar:nth-child(1) {
-    width: 30px;
+    width: 45px;
+    margin-right: 15px;
   }
   .bar:nth-child(2) {
-    width: 40px;
+    width: 60px;
   }
   .bar:nth-child(3) {
-    width: 30px;
+    width: 45px;
+    margin-left: 15px;
   }
 </style>

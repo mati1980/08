@@ -105,3 +105,15 @@ button {
   padding-right: 3rem;
   font-weight: var(--light);
 }
+
+.citat {
+  font-weight: var(--bold);
+  font-size: var(--font-size-s);
+  color: var(--primary-40);
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .citat {
+    font-size: var(--font-size-xxxl);
+  }
+}
