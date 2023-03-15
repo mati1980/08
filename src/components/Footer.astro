@@ -1,0 +1,77 @@
+---
+import News from "./News.astro";
+---
+
+<div class="footer">
+  <News />
+  <footer>
+    <ul class="ul1">
+      <li><a class="nav_item" href="src/pages/program.astro">Program</a></li>
+      <li><a class="nav_item" href="src/pages/booths.astro">Booths</a></li>
+    </ul>
+    <ul class="ul2">
+      <li><a class="nav_item" href="src/pages/about.astro">About us</a></li>
+      <li><a class="nav_item" href="src/pages/sponsors.astro">Sponsors</a></li>
+      <li><a class="nav_item" href="src/pages/contact.astro">Contact</a></li>
+    </ul>
+    <div class="social">
+      <h4>Follow us on social media</h4>
+      <i class="fa-brands fa-facebook fa-2x"></i>
+      <i class="fa-brands fa-instagram fa-2x"></i>
+      <i class="fa-brands fa-youtube fa-2x"></i>
+    </div>
+    <a href="src/pages/index.astro"> <img class="logo" src="/svg/logo.svg" alt="logo" /></a>
+    <p>Copenhagen Sakura Festival</p>
+  </footer>
+</div>
+
+<style>
+  footer {
+    background-color: var(--primary-40);
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+  }
+  .logo {
+    width: 150px;
+    margin: auto;
+  }
+  i {
+    color: var(--primary-80);
+    padding: 0.5rem;
+  }
+  .ul1 {
+    font-size: var(--font-size-s);
+    font-weight: var(--light);
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+  }
+  .ul2 {
+    font-size: var(--font-size-xs);
+    font-weight: var(--regular);
+    margin-bottom: 2rem;
+  }
+  ul {
+    margin: 1rem;
+  }
+  li {
+    margin-bottom: 0.7rem;
+  }
+  a {
+    color: var(--primary-100);
+  }
+  h4 {
+    color: var(--primary-100);
+    font-weight: var(--light);
+    font-size: var(--font-size-xs);
+  }
+  p {
+    color: var(--primary-100);
+    font-weight: var(--light);
+    font-size: var(--font-size-xxs);
+    margin-bottom: 3rem;
+  }
+  .social {
+    margin-bottom: 3rem;
+  }
+</style>

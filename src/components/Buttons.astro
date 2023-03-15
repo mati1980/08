@@ -20,14 +20,19 @@ const { variant = "primary", size = "medium" } = Astro.props;
   [data-variant="secondary"] {
     background: var(--tertiary-100);
     color: var(--primary-30);
-    border: 1px solid var(--muted-border);
   }
 
   /* Sizes */
   [data-size="medium"] {
     font-size: var(--font-size-s);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding: 1rem;
   }
-  [data-size="mobil"] {
+  [data-size="small"] {
     font-size: var(--font-size-xs);
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 </style>
