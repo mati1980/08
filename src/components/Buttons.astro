@@ -1,0 +1,33 @@
+---
+const { variant = "primary", size = "medium" } = Astro.props;
+---
+
+<button data-variant={variant} data-size={size}>
+  <slot />
+</button>
+
+<style>
+  button:hover {
+    scale: 1.04;
+  }
+
+  /* Variants */
+  [data-variant="primary"] {
+    background: var(--tertiary-40);
+    color: var(--primary-100);
+  }
+
+  [data-variant="secondary"] {
+    background: var(--tertiary-100);
+    color: var(--primary-30);
+    border: 1px solid var(--muted-border);
+  }
+
+  /* Sizes */
+  [data-size="medium"] {
+    font-size: var(--font-size-s);
+  }
+  [data-size="mobil"] {
+    font-size: var(--font-size-xs);
+  }
+</style>

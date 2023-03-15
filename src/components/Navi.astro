@@ -1,0 +1,88 @@
+---
+---
+
+<header>
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="../svg/logo.svg" alt="logo" />
+    </a>
+    <ul>
+      <li><a class="nav_item" href="src/pages/program.astro">Program</a></li>
+      <li><a class="nav_item" href="src/pages/booths.astro">Booths</a></li>
+    </ul>
+    <div class="nav_right">
+      <a href="src/pages/favoritter.astro"> <i class="fa-solid fa-heart fa-2xl"></i></a>
+      <ul class="nav_menu">
+        <li><a class="nav_item" href="src/pages/program.astro">Program</a></li>
+        <li><a class="nav_item" href="src/pages/booths.astro">Booths</a></li>
+        <li><a class="nav_item" href="src/pages/about.astro">About us</a></li>
+        <li><a class="nav_item" href="src/pages/sponsors.astro">Sponsors</a></li>
+        <li><a class="nav_item" href="src/pages/contact.astro">Contact</a></li>
+      </ul>
+
+      <div class="burger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .fa-heart {
+    color: var(--primary-100);
+  }
+  /***** MENU *****/
+
+  .nav_right {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav_right a {
+    margin-right: 30px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+  nav ul li {
+    margin: 30px;
+    font-size: var(--font-size-m);
+    font-weight: var(--light);
+  }
+
+  a {
+    color: var(--primary-100);
+  }
+
+  .navbar {
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav_menu {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--primary-100);
+    border-radius: 5px;
+  }
+</style>
