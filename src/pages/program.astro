@@ -1,0 +1,32 @@
+---
+import "../styles/global.css";
+import Programkort from "../components/Programkort.astro";
+import Button from "../components/Buttons.astro";
+import Header from "../components/Navi.astro";
+import Footer from "../components/Footer.astro";
+
+const url = "https://bymlifxuzmwdmqicmkcx.supabase.co";
+
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ5bWxpZnh1em13ZG1xaWNta2N4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODUwNDksImV4cCI6MTk5NDM2MTA0OX0.97APrkFnBi4ZzdZK_sEbgGV8reaMh6gPVQJ5t8HTn3w",
+  },
+};
+
+const response = await fetch(url, options);
+const data = await response.json();
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/0d7a458351.js" crossorigin="anonymous"></script>
+    <title>Program</title>
+  </head>
+</html>
