@@ -8,7 +8,7 @@ import Footer from "../../components/Footer.astro";
 import News from "../../components/News.astro";
 
 export async function getStaticPaths() {
-const url = "https://bymlifxuzmwdmqicmkcx.supabase.co/rest/v1/program";
+  const url = "https://bymlifxuzmwdmqicmkcx.supabase.co/rest/v1/program";
 
   const options = {
     headers: {
@@ -30,7 +30,6 @@ const url = "https://bymlifxuzmwdmqicmkcx.supabase.co/rest/v1/program";
 const { event } = Astro.props;
 ---
 
-
 <html lang="en">
   <meta charset="utf-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -46,26 +45,26 @@ const { event } = Astro.props;
     <Header />
 
     <main>
-      <section>
-        <h1>{event.event}</h1>
-        <h2>{event.association}</h2>
-      </section>
+      <h1>{event.event}</h1>
+      <h2>{event.association}</h2>
 
       <section>
         <h3>{event.day}</h3>
         <h4>{event.when}</h4>
         <p>{event.about}</p>
       </section>
-
-
     </main>
     <Footer />
   </body>
 </html>
 
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
-
-<style title={event.slug}>
-    <h1>event.when</h1>
-
+  main {
+    margin: 100px;
+  }
 </style>
