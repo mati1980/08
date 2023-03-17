@@ -1,9 +1,12 @@
 ---
 import Programkort from "./Programkort.astro";
-const { indhold, scene } = Astro.props;
+const { indhold, stage } = Astro.props;
 ---
 
-<h2>{scene}</h2>
 <section>
-  {indhold.map((program) => <Programkort begivenhed={program.event} firma={program.association} tid={program.when} />)}
+  <div>
+    <h2>{stage}</h2>
+  </div>
+
+  {indhold.map((program) => <Programkort event={program.event} association={program.association} when={program.when} />)}
 </section>

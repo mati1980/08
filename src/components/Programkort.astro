@@ -3,10 +3,11 @@ const { stage, event, association, when } = Astro.props;
 ---
 
 <a href="link"></a>
-<article>
+<article class="program">
   <div>
-    <h2>begivenhed</h2>
-    <p>firma</p>
-    <p>tidspunkt</p>
+    <h1>{stage}</h1>
+    <h2>{event}</h2>
+    <p>{association}</p>
+    <p>{when}</p>
   </div>
 </article>
