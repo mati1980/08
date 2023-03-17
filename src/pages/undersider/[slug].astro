@@ -1,0 +1,29 @@
+---
+export async function getStaticPaths() {
+  const url = "https://bymlifxuzmwdmqicmkcx.supabase.co";
+
+  const options = {
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ5bWxpZnh1em13ZG1xaWNta2N4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODUwNDksImV4cCI6MTk5NDM2MTA0OX0.97APrkFnBi4ZzdZK_sEbgGV8reaMh6gPVQJ5t8HTn3w",
+    },
+  };
+
+  const response = await fetch(url, options);
+  const data = await response.json();
+
+  return data.map((event) => {
+    return {
+      params: { slug: event.slug },
+      props: { event },
+    };
+  });
+}
+
+const { event } = Astro.props;
+---
+
+
+<style title={event.slug}>
+    <h1>event.when</h1>
+
+</style>
