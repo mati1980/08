@@ -2,13 +2,18 @@
 const { event, association, when } = Astro.props;
 ---
 
-<a href="link"></a>
-<article class="program">
-  <div>
-
-    <h2>{event}</h2>
-    <p>{association}</p>
-    <p>{when}</p>
-  </div>
-</article>
-
+<a href="link">
+  <article class="program">
+    <div>
+      <h2>{event}</h2>
+      <p>{association}</p>
+      <p>{when}</p>
+    </div>
+  </article>
+</a>
+<style>
+  article {
+    padding: 1em;
+    background-color: aqua;
+  }
+</style>

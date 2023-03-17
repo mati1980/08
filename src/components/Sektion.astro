@@ -1,16 +1,22 @@
 ---
 import Programkort from "./Programkort.astro";
-const { indhold, stage } = Astro.props;
+
+const { day, indhold, stage } = Astro.props;
 ---
 
+<h1>{day}</h1>
+<h2>{stage}</h2>
 <section class="sektion">
-  <h2>{stage}</h2>
-
-  {indhold.map((program) => <Programkort event={program.event} association={program.association} when={program.when} />)}
+  {indhold.map((program) => <Programkort link={"/undersider/" + program.slug} event={program.event} association={program.association} when={program.when} />)}
 </section>
 
 <style>
   .sektion {
     background-color: var(--primary-40);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  h2 {
+    background-color: aliceblue;
   }
 </style>
