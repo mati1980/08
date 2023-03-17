@@ -45,8 +45,10 @@ const { event } = Astro.props;
     <Header />
 
     <main>
-      <h1>{event.event}</h1>
-      <h2>{event.association}</h2>
+      <div>
+        <h1>{event.event}</h1>
+        <h2>{event.association}</h2>
+      </div>
 
       <section>
         <h3>{event.day}</h3>
@@ -59,12 +61,18 @@ const { event } = Astro.props;
 </html>
 
 <style>
-  section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  main {
+    margin: 50px;
   }
 
-  main {
-    margin: 100px;
+  @media (min-width: 1000px) {
+    main {
+      margin: 100px;
+    }
+
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>
