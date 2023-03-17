@@ -3,10 +3,14 @@ import Programkort from "./Programkort.astro";
 const { indhold, stage } = Astro.props;
 ---
 
-<section>
-  <div>
-    <h2>{stage}</h2>
-  </div>
+<section class="sektion">
+  <h2>{stage}</h2>
 
   {indhold.map((program) => <Programkort event={program.event} association={program.association} when={program.when} />)}
 </section>
+
+<style>
+  .sektion {
+    background-color: var(--primary-40);
+  }
+</style>

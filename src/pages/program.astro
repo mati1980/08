@@ -17,6 +17,10 @@ const options = {
 
 const response = await fetch(url, options);
 const data = await response.json();
+
+const mainstage = data.filter((event) => event.stage == "Main Stage");
+const secondstage = data.filter((event) => event.stage);
+const onthelawn = data.filter((event) => event.stage);
 ---
 
 <html lang="en">
@@ -35,7 +39,9 @@ const data = await response.json();
 
     <main>
       <Sektion indhold={data} />
+      <Sektion indhold={mainstage} stage="Main Stage" />
+      <Sektion indhold={secondstage} stage="Second Stage" />
+      <Footer />
     </main>
-    <Footer />
   </body>
 </html>
