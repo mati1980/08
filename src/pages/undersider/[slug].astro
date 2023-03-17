@@ -1,4 +1,12 @@
 ---
+import "../../styles/global.css";
+import Programkort from "../../components/Programkort.astro";
+import Sektion from "../../components/Sektion.astro";
+import Button from "../../components/Buttons.astro";
+import Header from "../../components/Navi.astro";
+import Footer from "../../components/Footer.astro";
+import News from "../../components/News.astro";
+
 export async function getStaticPaths() {
 const url = "https://bymlifxuzmwdmqicmkcx.supabase.co/rest/v1/program";
 
@@ -13,7 +21,7 @@ const url = "https://bymlifxuzmwdmqicmkcx.supabase.co/rest/v1/program";
 
   return data.map((event) => {
     return {
-      params: { slug: event.slug },
+      params: { slug: event.id },
       props: { event },
     };
   });
@@ -21,6 +29,40 @@ const url = "https://bymlifxuzmwdmqicmkcx.supabase.co/rest/v1/program";
 
 const { event } = Astro.props;
 ---
+
+
+<html lang="en">
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/0d7a458351.js" crossorigin="anonymous"></script>
+  <title>Program</title>
+
+  <body>
+    <Header />
+
+    <main>
+      <section>
+        <h1>{event.event}</h1>
+        <h2>{event.association}</h2>
+      </section>
+
+      <section>
+        <h3>{event.day}</h3>
+        <h4>{event.when}</h4>
+        <p>{event.about}</p>
+      </section>
+
+
+    </main>
+    <Footer />
+  </body>
+</html>
+
 
 
 <style title={event.slug}>

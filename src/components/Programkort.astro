@@ -1,8 +1,8 @@
 ---
-const { event, association, when } = Astro.props;
+const { event, association, when, link } = Astro.props;
 ---
 
-<a href="link">
+<a href={link}>
   <article class="program">
     <div>
       <h2>{event}</h2>
