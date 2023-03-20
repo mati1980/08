@@ -1,0 +1,102 @@
+---
+import Button from "./Buttons.astro";
+---
+
+<h1>Contact</h1>
+<form class="contact">
+  <div class="text">
+    <label for="firstname">First name</label>
+    <input type="text" id="firstname" name="firstname" />
+  </div>
+  <div class="text">
+    <label for="lastname">Last name</label>
+    <input type="text" id="lastname" name="lastname" />
+  </div>
+  <div class="text">
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" />
+  </div>
+  <div class="text">
+    <label for="tel">Phone number</label>
+    <input type="tel" id="tel" name="tel" />
+  </div>
+
+  <div>
+    <h3>What is your inquiry about?</h3>
+    <div class="form-control">
+      <input type="radio" id="volunteer" name="interest" value="volunteer" checked />
+      <label for="volunteer">Volunteer</label>
+    </div>
+    <div class="form-control">
+      <input type="radio" id="performance" name="interest" value="performance" />
+      <label for="performance">Performance</label>
+    </div>
+    <div class="form-control">
+      <input type="radio" id="booths" name="interest" value="booths" />
+      <label for="booths">Booths</label>
+    </div>
+    <div class="form-control">
+      <input type="radio" id="sponsor" name="interest" value="sponsor" />
+      <label for="sponsor">Sponsor</label>
+    </div>
+    <div class="form-control">
+      <input type="radio" id="guest" name="interest" value="guest" />
+      <label for="guest">Festival guest</label>
+    </div>
+    <div class="form-control">
+      <input type="radio" id="other" name="interest" value="other" />
+      <label for="other">Other</label>
+    </div>
+  </div>
+
+  <label class="form-felt">
+    Message
+    <textarea placeholder="" name="besked" rows="5"></textarea>
+  </label>
+
+  <Button variant="primary" size="small">Submit</Button>
+</form>
+
+<style>
+  .contact {
+    display: grid;
+    padding: 1rem;
+    background-color: var(--primary-40);
+    border-bottom-left-radius: var(--border-radius-box);
+    border-top-right-radius: var(--border-radius-box);
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  label,
+  h3 {
+    color: var(--primary-100);
+    font-size: var(--font-size-xxs);
+    font-weight: var(--light);
+  }
+  input,
+  textarea {
+    border: none;
+    background-color: var(--primary-30);
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-top-right-radius: var(--border-radius-box);
+    border-bottom-left-radius: var(--border-radius-box);
+    margin-bottom: 1rem;
+  }
+  .text,
+  .form-felt {
+    display: grid;
+  }
+  .form-control label {
+    font-size: var(--font-size-xxxs);
+    font-weight: var(--regular);
+  }
+  @media (min-width: 550px) {
+    .contact {
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>
