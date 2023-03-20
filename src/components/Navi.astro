@@ -7,8 +7,8 @@
       <img class="logo" src="../svg/logo.svg" alt="logo" />
     </a>
     <ul>
-      <li><a class="nav_item" href="program">Program</a></li>
-      <li><a class="nav_item" href="booths">Booths</a></li>
+      <li><a class="nav_item1" href="program">Program</a></li>
+      <li><a class="nav_item1" href="booths">Booths</a></li>
     </ul>
     <div class="nav_right">
       <a href="favoritter"> <i class="fa-solid fa-heart fa-3x"></i></a>
@@ -30,51 +30,16 @@
 
   <h3 class="flip flip_left">Copenhagen Sakura Festival</h3>
   <h3 class="flip flip_right">22th - 23th of april 2023 in Langelinie Park</h3>
+  <script src="../scripts/burger.js"></script>
 </header>
 
 <style>
-  .fa-heart {
-    display: none;
-  }
-  @media (min-width: 1000px) {
-    .fa-heart {
-      display: block;
-      color: var(--primary-80);
-    }
-    .fa-heart:hover {
-      color: var(--tertiary-100);
-    }
-  }
-
-  /***FLIP ***/
-  .flip {
-    display: none;
-  }
-  @media (min-width: 1000px) {
-    .flip_left {
-      transform: rotate(-90deg) translate(-100%, 2rem);
-      transform-origin: top left;
-    }
-    .flip_right {
-      transform: rotate(90deg) translate(100%, 2rem);
-      transform-origin: top right;
-      right: 0;
-    }
-    .flip {
-      display: block;
-      position: fixed;
-      width: 80vh;
-      text-align: center;
-      font-size: var(--font-size-xs);
-      font-weight: var(--light);
-    }
-  }
-
   /***** MENU *****/
 
   .logo {
     width: 80px;
     margin-top: 5px;
+    z-index: 10;
   }
   @media (min-width: 1000px) {
     .logo {
@@ -89,17 +54,15 @@
     align-items: center;
   }
 
-  .nav_right a {
-    margin-right: 30px;
-  }
-
   nav ul {
     display: none;
     flex-direction: row;
     list-style: none;
   }
-  nav ul li {
+  .nav_item1 {
     margin: 30px;
+  }
+  nav ul li {
     font-size: var(--font-size-m);
     font-weight: var(--light);
   }
@@ -137,6 +100,7 @@
   .burger {
     display: block;
     cursor: pointer;
+    z-index: 10;
   }
 
   .bar {
@@ -157,5 +121,86 @@
   .bar:nth-child(3) {
     width: 45px;
     margin-left: 15px;
+  }
+
+  /** AKTIV BURGER **/
+  .burger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .burger.active .bar:nth-child(1) {
+    transform: translateY(16px) rotate(45deg);
+    width: 60px;
+    margin: 0;
+  }
+  .burger.active .bar:nth-child(3) {
+    transform: translateY(-16px) rotate(-45deg);
+    width: 60px;
+    margin: 0;
+  }
+
+  .nav_menu {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background-color: var(--primary-40);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 0.3s;
+    top: 0;
+    left: 100%;
+    padding-top: 100px;
+  }
+
+  .nav_item {
+    font-size: var(--font-size-s);
+  }
+  .nav_menu li {
+    margin-bottom: 30px;
+  }
+
+  .nav_menu.active {
+    top: 0;
+    left: 0;
+  }
+
+  /** HJERTE **/
+  .fa-heart {
+    display: none;
+  }
+  @media (min-width: 1000px) {
+    .fa-heart {
+      display: block;
+      color: var(--primary-80);
+      margin-right: 30px;
+      z-index: 10;
+    }
+    .fa-heart:hover {
+      color: var(--tertiary-100);
+    }
+  }
+
+  /*** FLIP ***/
+  .flip {
+    display: none;
+  }
+  @media (min-width: 1000px) {
+    .flip_left {
+      transform: rotate(-90deg) translate(-100%, 2rem);
+      transform-origin: top left;
+    }
+    .flip_right {
+      transform: rotate(90deg) translate(100%, 2rem);
+      transform-origin: top right;
+      right: 0;
+    }
+    .flip {
+      display: block;
+      position: fixed;
+      width: 80vh;
+      text-align: center;
+      font-size: var(--font-size-xs);
+      font-weight: var(--light);
+    }
   }
 </style>
