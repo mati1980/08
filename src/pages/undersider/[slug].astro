@@ -46,23 +46,23 @@ const { event } = Astro.props;
     <Header />
 
     <main>
-      <div>
+      <section>
         <h1>{event.event}</h1>
         <h2>{event.association}</h2>
-      </div>
+      </section>
 
-      <section>
+      <section class="singleview_grid">
         <div>
           <h3>{event.day}</h3>
           <h4>{event.when}</h4>
 
           <p>{event.about}</p>
-          <p>{event.lorem}</p>
-          <Button variant="teritary" size="small">Go to website</Button>
+          <h5>{event.lorem}</h5>
+          <Button variant="teritary" size="xxsmall">Go to website</Button>
         </div>
         <div>
           <img src="/img/cosplay.webp" alt="cosplay" />
-          <Button variant="primary" size="small">Add to favorites</Button>
+          <Button variant="primary" size="xxsmall">Add to favorites</Button>
         </div>
       </section>
     </main>
@@ -75,14 +75,41 @@ const { event } = Astro.props;
     margin: 50px;
   }
 
+  img {
+    border-radius: 0rem 2rem 0rem 2rem;
+    size: 50%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  h5 {
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    color: var(--primary-80);
+    margin-bottom: 3rem;
+    text-align: center;
+    line-height: 0;
+  }
+
   @media (min-width: 1000px) {
     main {
       margin: 100px;
     }
 
-    section {
+    img {
+      border-radius: 0rem 2rem 0rem 2rem;
+      size: 50%;
+      margin-bottom: 1rem;
+    }
+    .singleview_grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
+    }
+
+    h5 {
+      margin-right: 3rem;
     }
   }
 </style>
