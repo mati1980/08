@@ -6,6 +6,7 @@ import Button from "../../components/Buttons.astro";
 import Header from "../../components/Navi.astro";
 import Footer from "../../components/Footer.astro";
 import News from "../../components/News.astro";
+import Description from "../../components/Description.astro";
 
 export async function getStaticPaths() {
   const url = "https://bymlifxuzmwdmqicmkcx.supabase.co/rest/v1/program";
@@ -51,13 +52,22 @@ const { event } = Astro.props;
       </div>
 
       <section>
-        <h3>{event.day}</h3>
-        <h4>{event.when}</h4>
-        <p>{event.about}</p>
+        <div>
+          <h3>{event.day}</h3>
+          <h4>{event.when}</h4>
+
+          <p>{event.about}</p>
+          <p>{event.lorem}</p>
+          <Button variant="teritary" size="small">Go to website</Button>
+        </div>
+        <div>
+          <img src="/img/cosplay.webp" alt="cosplay" />
+          <Button variant="primary" size="small">Add to favorites</Button>
+        </div>
       </section>
     </main>
-    <Footer />
   </body>
+  <Footer />
 </html>
 
 <style>
