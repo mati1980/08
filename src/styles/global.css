@@ -73,6 +73,12 @@ body {
   overscroll-behavior-block: none;
 }
 
+main {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: grid;
+}
+
 h1 {
   font-weight: var(--bold);
 }
@@ -110,7 +116,12 @@ button {
   text-align: center;
 }
 @media (min-width: 1000px) {
-  .citat {
+  .citat,
+  h1 {
     font-size: var(--font-size-xxxl);
+  }
+  main {
+    margin-left: 7rem;
+    margin-right: 7rem;
   }
 }
