@@ -84,6 +84,11 @@ h1 {
   text-align: center;
   text-transform: uppercase;
 }
+h4 {
+  font-weight: var(--light);
+  font-size: var(--font-size-s);
+  color: var(--tertiary-100);
+}
 
 p {
   font-weight: var(--regular);
@@ -123,6 +128,7 @@ button {
   color: var(--primary-40);
   text-align: center;
 }
+
 @media (min-width: 1000px) {
   .citat,
   h1 {
