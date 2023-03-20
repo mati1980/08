@@ -1,0 +1,26 @@
+---
+const { title, about } = Astro.props;
+import Button from "./Buttons.astro";
+---
+
+<div class="card">
+  <h2>{title}</h2>
+  <p>{about}</p>
+  <img src="" alt="" />
+  <Button variant="primary" size="small">TAKE ME THERE</Button>
+</div>
+
+<style>
+  .card {
+    background-color: var(--secondary-100);
+    border-bottom-left-radius: var(--border-radius-box);
+    border-top-right-radius: var(--border-radius-box);
+    padding: 30px;
+  }
+  h2 {
+    color: var(--primary-40);
+  }
+  p {
+    color: var(--primary-40);
+  }
+</style>
