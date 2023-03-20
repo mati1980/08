@@ -50,7 +50,7 @@ const onthelawnSunday = data.filter((event) => event.stage == "On The Lawn" && e
           <div>
             <Sektion indhold={mainstageSaturday} stage="Main Stage" />
           </div>
-          <div>
+          <div class="secondlawn_gap">
             <Sektion indhold={secondstageSaturday} stage="Second Stage" />
             <Sektion indhold={onthelawnSaturday} stage="On The Lawn" />
           </div>
@@ -61,7 +61,7 @@ const onthelawnSunday = data.filter((event) => event.stage == "On The Lawn" && e
           <div>
             <Sektion indhold={mainstageSunday} stage="Main Stage" />
           </div>
-          <div>
+          <div class="secondlawn_gap">
             <Sektion indhold={secondstageSunday} stage="Second Stage" />
             <Sektion indhold={onthelawnSunday} stage="On The Lawn" />
           </div>
@@ -73,8 +73,8 @@ const onthelawnSunday = data.filter((event) => event.stage == "On The Lawn" && e
 </html>
 
 <style>
-  main {
-    margin: 50px;
+  .secondlawn_gap {
+    gap: 100rem;
   }
 
   .pol {
