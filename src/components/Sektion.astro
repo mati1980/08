@@ -5,10 +5,13 @@ const { day, indhold, stage } = Astro.props;
 ---
 
 <h1>{day}</h1>
-<h2>{stage}</h2>
-<section class="sektion">
-  {indhold.map((program) => <Programkort link={"/../undersider/" + program.id} event={program.event} association={program.association} when={program.when} />)}
-</section>
+
+<div class="sektion">
+  <h2>{stage}</h2>
+  <section>
+    {indhold.map((program) => <Programkort link={"/../undersider/" + program.id} event={program.event} association={program.association} when={program.when} />)}
+  </section>
+</div>
 
 <style>
   .sektion {
