@@ -83,6 +83,12 @@ h1 {
   font-weight: var(--bold);
 }
 
+p {
+  font-weight: var(--regular);
+  font-size: var(--font-size-xxxs);
+  color: var(--secondary-100);
+}
+
 a:where(:any-link) {
   text-decoration: none;
 }
@@ -123,5 +129,10 @@ button {
   main {
     margin-left: 7rem;
     margin-right: 7rem;
+  }
+  p {
+    font-weight: var(--regular);
+    font-size: var(--font-size-xxs);
+    color: var(--secondary-100);
   }
 }
