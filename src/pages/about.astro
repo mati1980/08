@@ -23,13 +23,24 @@ import Description from "../components/Description.astro";
     <main>
       <Description header="SAKURA FESTIVAL" text="Each spring at Langelinje you can discover the cherry blossom or as we call it, sakura. We share with you the beautiful tradition of connecting under the sakura trees. We dance, we laugh, we eat!" />
       <img class="img" src="public/img/danskopi.webp" alt="img" />
-      <article>
+      <article class="grid_1-1">
         <h2 class="citat2">“On a festival day we say: there are fools who dance and fools who observe and if you ought to be foolish you better danse”</h2>
         <p>
           In Japan people love and admire Sakura blossom and almost everybody go out to enjoy its beauty together with families, friends, lovers, office-mates and so forth wherever and whenever Sakura bloom. Once a year Sakura connects people and people meet people under Sakura trees. It is also the utmost and fundamental goal of the Committee. <br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum.
         </p>
       </article>
+      <article class="grid_1-1">
+        <p>
+          The original idea came from the noble deed of donation of 200 cherry blossom (Sakura) trees by Mr. Seiichi Takaki, President of Andersen Institute of Bread & Life, the holding company of Andersen Group of Hiroshima City, and the employees of the company. The donated trees were planted in Langelinie Park. Mr. Takaki is Honorary Consul of Denmark and he was appointed to the honorable position of ambassador of H.C. Andersen on the occasion of the 200th anniversary of H.C. Andersen’s birthday in 2005. The donated Sakura trees were planted in Langelinie Park. <br /><br />The Committee of the Copenhagen Sakura Festival was established in February, 2008 to arrange the cultural event Copenhagen Sakura Festival with the help of the Japanese Embassy in Denmark, the Municipality of
+          Copenhagen and other Japan-related cultural and private organizations. We would like to thank all of the sponsors of the festival for their contributions.
+        </p>
+        <img class="img" src="public/img/udsigt.webp" alt="udsigt" />
+      </article>
+      <div class="grid_1-1">
+        <img class="img" src="public/img/plads.webp" alt="plads" />
+        <img class="img2" src="public/img/dansepige.webp" alt="dansepige" />
+      </div>
     </main>
     <Footer />
   </body>
@@ -41,16 +52,39 @@ import Description from "../components/Description.astro";
     color: var(--primary-40);
     margin: 20px;
   }
+  .img {
+    border-radius: 0rem 6rem 0rem 6rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .img2 {
+    border-radius: 6rem 0rem 6rem 0rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   @media (min-width: 1000px) {
     .img {
       border-radius: 0rem 6rem 0rem 6rem;
       margin: auto;
       padding: 40px;
     }
+    .img2 {
+      border-radius: 6rem 0rem 6rem 0rem;
+      margin: auto;
+      padding: 40px;
+      margin-top: 200px;
+    }
     .citat2 {
       font-weight: var(--bold);
-      font-size: var(--font-size-m);
+      font-size: var(--font-size-l);
       color: var(--primary-40);
+    }
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 30px;
+      gap: 20px;
+      margin-bottom: 60px;
     }
   }
 </style>
