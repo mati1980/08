@@ -18,11 +18,11 @@ const options = {
 const response = await fetch(url, options);
 const data = await response.json();
 
-const mainstageSaturday = data.filter((event) => event.stage == "Main stage" && event.day == "Saturday");
-const mainstageSunday = data.filter((event) => event.stage == "Main stage" && event.day == "Sunday");
+const mainstageSaturday = data.filter((event) => event.stage == "Main Stage" && event.day == "Saturday");
+const mainstageSunday = data.filter((event) => event.stage == "Main Stage" && event.day == "Sunday");
 
-const secondstageSaturday = data.filter((event) => event.stage == "Second stage" && event.day == "Saturday");
-const secondstageSunday = data.filter((event) => event.stage == "Second stage" && event.day == "Sunday");
+const secondstageSaturday = data.filter((event) => event.stage == "Second Stage" && event.day == "Saturday");
+const secondstageSunday = data.filter((event) => event.stage == "Second Stage" && event.day == "Sunday");
 
 const onthelawnSaturday = data.filter((event) => event.stage == "On The Lawn" && event.day == "Saturday");
 const onthelawnSunday = data.filter((event) => event.stage == "On The Lawn" && event.day == "Sunday");
