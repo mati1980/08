@@ -81,6 +81,15 @@ main {
 
 h1 {
   font-weight: var(--bold);
+  font-size: var(--font-size-xxxl);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+p {
+  font-weight: var(--regular);
+  font-size: var(--font-size-xxxs);
+  color: var(--secondary-100);
 }
 
 a:where(:any-link) {
@@ -123,5 +132,10 @@ button {
   main {
     margin-left: 7rem;
     margin-right: 7rem;
+  }
+  p {
+    font-weight: var(--regular);
+    font-size: var(--font-size-xxs);
+    color: var(--secondary-100);
   }
 }

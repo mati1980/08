@@ -22,6 +22,11 @@ const { variant = "primary", size = "medium" } = Astro.props;
     color: var(--primary-30);
   }
 
+  [data-variant="tertiary"] {
+    background: var(--primary-40);
+    color: var(--primary-10);
+  }
+
   /* Sizes */
   [data-size="medium"] {
     font-size: var(--font-size-s);
@@ -34,5 +39,12 @@ const { variant = "primary", size = "medium" } = Astro.props;
     padding: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  [data-size="xxsmall"] {
+    font-size: var(--font-size-xxxs);
+    padding: 0.8rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
 </style>
