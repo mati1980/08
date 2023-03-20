@@ -34,7 +34,7 @@ import Eventcard from "../components/Eventcard.astro";
   <body>
     <Header />
     <main>
-      <h1 class="citat">“Sakura connects people”</h1>
+      <h2 class="citat">“Sakura connects people”</h2>
       <Button variant="primary" size="medium">Show program</Button>
       <svg class="free" width="189" height="185" viewBox="0 0 189 185" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M76.6964 96.5714C67.2224 96.8959 58.0977 99.9693 48.8311 101.938C41.2453 103.552 33.4288 104.452 26.2939 107.471C19.0804 110.51 12.6395 115.905 9.55058 123.09C6.46708 130.288 7.25274 139.323 12.5024 145.143C15.4551 148.395 19.4883 150.437 23.4118 152.396C31.4631 156.413 39.5145 160.429 47.5604 164.434C52.0675 166.687 56.859 168.989 61.878 168.592C69.5323 167.984 75.1586 161.448 79.8974 155.41C85.826 147.85 91.7477 140.307 97.6763 132.747C99.9544 129.834 102.27 126.876 103.606 123.42C110.434 105.825 91.4372 96.0455 76.691 96.5592L76.6964 96.5714Z" fill="#FFC7CD"></path>
@@ -47,13 +47,13 @@ import Eventcard from "../components/Eventcard.astro";
       <h1>EVENTS</h1>
       <article class="grid_1-1-1">
         <Eventcard title="Wadaiko" about="High powered drum show">
-          <img class="img" src="public/img/dansepige.webp" alt="" />
+          <img class="img" src="public/img/wadaikokopi.webp" alt="wadaiko" />
         </Eventcard>
         <Eventcard title="Karate kids" about="Hard hitting martial arts">
-          <img class="img" src="public/img/dansepige.webp" alt="" />
+          <img class="img" src="public/img/karater.webp" alt="karate" />
         </Eventcard>
         <Eventcard title="Calligraphy" about="Ink painting with soul">
-          <img class="img" src="public/img/dansepige.webp" alt="" />
+          <img class="img" src="public/img/caligrafi.webp" alt="calligraphy" />
         </Eventcard>
       </article>
       <Button variant="primary" size="medium">Show program</Button>
@@ -74,6 +74,13 @@ import Eventcard from "../components/Eventcard.astro";
 
           <Button variant="primary" size="small">BECOME A VOLUNTEER</Button>
         </div>
+      </article>
+      <h2 class="citat">“People meet under the sakura trees”</h2>
+      <h1>BOOTHS</h1>
+      <article class="grid_1-1-1">
+        <Eventcard title="Selfish" about="Sushi and Bento box" />
+        <Eventcard title="Shiki Bonsai" about="Bonsai Plants" />
+        <Eventcard title="Fantask:" about="Anime, Manga merchandise" />
       </article>
     </main>
     <Footer />
