@@ -87,7 +87,7 @@ onthelawnSunday.sort(compare);
 
         <h1>Sunday</h1>
         <div class="pol">
-          <div class="scene">
+          <div>
             <Sektion indhold={mainstageSunday} stage="Main Stage" />
           </div>
           <div class="secondlawn_gap">
@@ -105,10 +105,12 @@ onthelawnSunday.sort(compare);
 <style>
   .secondlawn_gap {
     display: grid;
+    gap: 1rem;
   }
 
   .pol {
     display: grid;
+    gap: 1rem;
   }
 
   h1 {
@@ -116,13 +118,9 @@ onthelawnSunday.sort(compare);
   }
 
   @media (min-width: 1000px) {
-    main {
-      margin: 100px;
-    }
     .pol {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
     }
   }
 </style>
