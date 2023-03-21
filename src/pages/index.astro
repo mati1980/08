@@ -46,15 +46,13 @@ import Eventcard from "../components/Eventcard.astro";
       </svg>
       <h1>EVENTS</h1>
       <article class="grid_1-1-1">
-        <Eventcard title="Wadaiko" about="High powered drum show">
-          <img class="img" src="/img/wadaikokopi.webp" alt="wadaiko" />
-        </Eventcard>
-        <Eventcard title="Karate kids" about="Hard hitting martial arts">
-          <img class="img" src="/img/karater.webp" alt="karate" />
-        </Eventcard>
-        <Eventcard title="Calligraphy" about="Ink painting with soul">
-          <img class="img" src="/img/caligrafi.webp" alt="calligraphy" />
-        </Eventcard>
+        <Eventcard title="Wadaiko" about="High powered drum show" background_img="url('/img/wadaikokopi.webp')" />
+        <div class="hide">
+          <Eventcard title="Karate kids" about="Hard hitting martial arts" background_img="url('/img/karater.webp')" />
+        </div>
+        <div class="hide1">
+          <Eventcard title="Calligraphy" about="Ink painting with soul" background_img="url('/img/caligrafi.webp')" />
+        </div>
       </article>
       <Button variant="primary" size="medium">Show program</Button>
       <h1>SAKURA FESTIVAL</h1>
@@ -76,12 +74,6 @@ import Eventcard from "../components/Eventcard.astro";
         </div>
       </article>
       <h2 class="citat">“People meet under the sakura trees”</h2>
-      <h1>BOOTHS</h1>
-      <article class="grid_1-1-1">
-        <Eventcard title="Selfish" about="Sushi and Bento box" />
-        <Eventcard title="Shiki Bonsai" about="Bonsai Plants" />
-        <Eventcard title="Fantask:" about="Anime, Manga merchandise" />
-      </article>
     </main>
     <Footer />
   </body>
@@ -108,17 +100,30 @@ import Eventcard from "../components/Eventcard.astro";
     margin-bottom: 30px;
     margin-top: 20px;
   }
+
+  .hide,
+  .hide1 {
+    display: none;
+  }
+  @media (min-width: 1300px) {
+    .hide1 {
+      display: block;
+    }
+  }
   @media (min-width: 1000px) {
+    .hide {
+      display: block;
+    }
     main {
       margin-left: 7rem;
       margin-right: 7rem;
     }
     .grid_1-1-1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 30px;
+      display: flex;
+      gap: 20px;
       margin-bottom: 40px;
       margin-top: 40px;
+      margin: auto;
     }
     .grid_1-1 {
       display: grid;
