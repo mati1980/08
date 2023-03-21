@@ -1,12 +1,11 @@
 ---
-const { event, association, when, link } = Astro.props;
+const { event, association, when, link, image } = Astro.props;
 ---
 
 <a href={link}>
   <article class="program">
     <div>
       <h2>{event}</h2>
-
       <p>{association}</p>
       <p>{when}</p>
     </div>
@@ -14,6 +13,11 @@ const { event, association, when, link } = Astro.props;
 </a>
 <style>
   article {
-    padding: 1em;
+    padding: 1rem;
+  }
+  a {
+    font-weight: var(--regular);
+    font-size: var(--font-size-xxxs);
+    color: var(--secondary-100);
   }
 </style>
