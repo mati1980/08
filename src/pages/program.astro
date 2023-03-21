@@ -15,17 +15,36 @@ const options = {
   },
 };
 
+function compare(a, b) {
+  if (a.when < b.when) {
+    return -1;
+  }
+  if (a.when > b.when) {
+    return 1;
+  }
+  return 0;
+}
+
 const response = await fetch(url, options);
 const data = await response.json();
 
 const mainstageSaturday = data.filter((event) => event.stage == "Main Stage" && event.day == "Saturday");
+mainstageSaturday.sort(compare);
+
 const mainstageSunday = data.filter((event) => event.stage == "Main Stage" && event.day == "Sunday");
+mainstageSunday.sort(compare);
 
 const secondstageSaturday = data.filter((event) => event.stage == "Second Stage" && event.day == "Saturday");
+secondstageSaturday.sort(compare);
+
 const secondstageSunday = data.filter((event) => event.stage == "Second Stage" && event.day == "Sunday");
+secondstageSunday.sort(compare);
 
 const onthelawnSaturday = data.filter((event) => event.stage == "On The Lawn" && event.day == "Saturday");
+onthelawnSaturday.sort(compare);
+
 const onthelawnSunday = data.filter((event) => event.stage == "On The Lawn" && event.day == "Sunday");
+onthelawnSunday.sort(compare);
 ---
 
 <html lang="en">
