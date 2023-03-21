@@ -4,6 +4,19 @@ import Header from "../components/Navi.astro";
 import Footer from "../components/Footer.astro";
 import Description from "../components/Description.astro";
 import Booths from "../components/Booths.astro";
+
+const url = "https://bymlifxuzmwdmqicmkcx.supabase.co/rest/v1/booths";
+
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ5bWxpZnh1em13ZG1xaWNta2N4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODUwNDksImV4cCI6MTk5NDM2MTA0OX0.97APrkFnBi4ZzdZK_sEbgGV8reaMh6gPVQJ5t8HTn3w",
+  },
+};
+
+const response = await fetch(url, options);
+const data = await response.json();
+
+const { category, name, about } = Astro.props;
 ---
 
 <html lang="en">
@@ -16,15 +29,31 @@ import Booths from "../components/Booths.astro";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/0d7a458351.js" crossorigin="anonymous"></script>
-    <title>Sakura Festival</title>
+    <title>Booths</title>
   </head>
   <body>
     <Header />
     <main>
       <Description header="BOOTHS" text="Try our many booths at the festival. There is everything from Japanese riceballs, to bonsai plants." />
+
+      <section class="pol">
+        {data.map((program) => <Booths category={program.category} name={program.name} about={program.about} />)}
+      </section>
     </main>
     <Footer />
   </body>
 </html>
 
-<style></style>
+<style>
+  .pol {
+    gap: 4rem;
+  }
+
+  @media (min-width: 1000px) {
+    .pol {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4rem;
+    }
+  }
+</style>

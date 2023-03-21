@@ -1,7 +1,19 @@
 ---
-const { category, header, text } = Astro.props;
+const { category, name, about } = Astro.props;
 ---
 
-<h2>{category}</h2>
-<h3>{header}</h3>
-<p>{text}</p>
+<article>
+  <div class="hej">
+    <h2>{category}</h2>
+    <p>{name}</p>
+    <p>{about}</p>
+  </div>
+</article>
+
+<style>
+  .hej {
+    background-color: var(--primary-40);
+    border-radius: 0rem 2rem 0rem 2rem;
+    padding: 2rem;
+  }
+</style>
