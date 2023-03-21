@@ -35,7 +35,7 @@ const { category, name, about } = Astro.props;
     <Header />
     <main>
       <Description header="BOOTHS" text="Try our many booths at the festival. There is everything from Japanese riceballs, to bonsai plants." />
-
+      <img class="img" src="public/img/booth.webp" alt="booths" />
       <section class="pol">
         {data.map((program) => <Booths category={program.category} name={program.name} about={program.about} />)}
       </section>
@@ -57,5 +57,11 @@ const { category, name, about } = Astro.props;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 4rem;
     }
+  }
+  .img {
+    border-radius: 0rem 6rem 0rem 6rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 30px;
   }
 </style>
