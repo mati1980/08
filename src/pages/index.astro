@@ -46,12 +46,12 @@ import Eventcard from "../components/Eventcard.astro";
       </svg>
       <h1>EVENTS</h1>
       <article class="grid_1-1-1">
-        <Eventcard title="Wadaiko" about="High powered drum show" background_img="url('/img/wadaiko.webp')" />
+        <Eventcard title="Wadaiko" about="High powered drum show" background_img="url('/img/drums.webp')" />
         <div class="hide">
-          <Eventcard title="Karate kids" about="Hard hitting martial arts" background_img="url('/img/karater.webp')" />
+          <Eventcard title="Karate kids" about="Hard hitting martial arts" background_img="url('/img/karate.webp')" />
         </div>
         <div class="hide1">
-          <Eventcard title="Calligraphy" about="Ink painting with soul" background_img="url('/img/caligrafi.webp')" />
+          <Eventcard title="Calligraphy" about="Ink painting with soul" background_img="url('/img/forsidecaligrafi.webp')" />
         </div>
       </article>
       <Button variant="primary" size="medium">Show program</Button>
@@ -67,7 +67,7 @@ import Eventcard from "../components/Eventcard.astro";
         <div>
           <div class="grid_2-1">
             <h4>Do you wanna join the Sakura Festival team?</h4>
-            <img src="/svg/blomst.svg" alt="" />
+            <img class="blomst" src="/svg/blomst.svg" alt="" />
           </div>
 
           <Button variant="primary" size="small">BECOME A VOLUNTEER</Button>
@@ -94,16 +94,15 @@ import Eventcard from "../components/Eventcard.astro";
   span {
     color: var(--tertiary-100);
   }
-  .img {
-    border-bottom-left-radius: var(--border-radius-box);
-    border-top-right-radius: var(--border-radius-box);
-    margin-bottom: 30px;
-    margin-top: 20px;
-  }
 
   .hide,
   .hide1 {
     display: none;
+  }
+  .blomst {
+    width: 100px;
+    margin: auto;
+    margin-bottom: 20px;
   }
   @media (min-width: 1300px) {
     .hide1 {
@@ -136,6 +135,11 @@ import Eventcard from "../components/Eventcard.astro";
       display: grid;
       grid-template-columns: 2fr 1fr;
       margin-top: 40px;
+    }
+    .blomst {
+      width: 200px;
+      margin-bottom: 40px;
+      margin-left: 40px;
     }
   }
 </style>
