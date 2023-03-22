@@ -1,49 +1,46 @@
 ---
-const { title, about, background_img } = Astro.props;
+const { title, about, imgPath } = Astro.props;
 import Button from "./Buttons.astro";
 ---
 
 <a href="program">
   <div class="card">
-    <div class="indre_boks">
-      <h2>{title}</h2>
-      <p>{about}</p>
-      <Button variant="primary" size="medium">TAKE ME THERE</Button>
+    <h2>{title}</h2>
+    <p>{about}</p>
+    <img src={imgPath} alt="img" />
+    <div class="knap">
+      <Button variant="primary" size="small">TAKE ME THERE</Button>
     </div>
   </div>
 </a>
-<style define:vars={{ background_img }}>
+<style>
   .card {
-    background-color: var(--secondary-80);
+    background-color: var(--secondary-100);
     border-bottom-left-radius: var(--border-radius-box);
     border-top-right-radius: var(--border-radius-box);
     width: 350px;
     height: 450px;
     margin: auto;
-    background-image: var(--background_img);
+    display: grid;
   }
   .card:hover {
-    opacity: 100%;
+    opacity: 90%;
+  }
+  img {
+    height: 250px;
+    margin: auto;
   }
   h2 {
-    color: var(--primary-40);
+    color: var(--primary-30);
     margin: auto;
     margin-top: 20px;
   }
   p {
     color: var(--primary-40);
     margin: auto;
-    margin-bottom: 30px;
   }
-
-  .indre_boks {
+  .knap {
     display: grid;
-    width: 92%;
-    position: relative;
-    top: 58%;
-    margin: auto;
-    background-color: var(--secondary-100);
-    border-bottom-left-radius: var(--border-radius-box);
-    border-top-right-radius: var(--border-radius-box);
+    margin: 10px;
   }
 </style>
