@@ -3,12 +3,14 @@ const { title, about } = Astro.props;
 import Button from "./Buttons.astro";
 ---
 
-<div class="card">
-  <article></article>
-  <h2>{title}</h2>
-  <p>{about}</p>
-  <slot />
-</div>
+<a href="program">
+  <div class="card">
+    <article></article>
+    <h2>{title}</h2>
+    <p>{about}</p>
+    <slot />
+  </div>
+</a>
 
 <style>
   .card {
@@ -24,5 +26,4 @@ import Button from "./Buttons.astro";
   p {
     color: var(--primary-40);
   }
-  
 </style>
