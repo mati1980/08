@@ -59,11 +59,11 @@ const { event } = Astro.props;
 
           <h5>{event.about}</h5>
           <p>{event.lorem}</p>
-          <Button variant="tertiary" size="xxsmall">Go to website</Button>
+          <Button variant="tertiary" size="small">Go to website</Button>
         </div>
         <div>
           <img src={`../img/${event.image}`} />
-          <Button variant="primary" size="xxsmall">Add to favorites</Button>
+          <Button variant="primary" size="small">Add to favorites</Button>
         </div>
       </section>
     </main>
@@ -78,24 +78,36 @@ const { event } = Astro.props;
     margin-top: 1rem;
   }
 
+  .singleview_grid {
+    padding-bottom: 3rem;
+  }
+
   h5 {
     margin-bottom: 1rem;
-    font-weight: var(--regular);
+    font-weight: var(--bold);
     font-size: var(--font-size-xxs);
     color: var(--secondary-100);
   }
-
   h4 {
-    font-weight: var(--light);
+    font-weight: var(--extralight);
     font-size: var(--font-size-s);
-    color: var(--secondary-80);
+    color: var(--primary-80);
   }
-
   h2 {
     color: var(--primary-80);
     margin-bottom: 3rem;
     text-align: center;
     line-height: 0;
+  }
+
+  h3 {
+    font-weight: var(--bold);
+    font-size: var(--font-size-s);
+    color: var(--secondary-100);
+  }
+
+  p {
+    margin-bottom: 1rem;
   }
 
   @media (min-width: 1000px) {
@@ -110,6 +122,8 @@ const { event } = Astro.props;
     .singleview_grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      margin: 2rem;
+      padding-bottom: 3rem;
     }
   }
 </style>
