@@ -74,40 +74,48 @@ onthelawnSunday.sort(compare);
       </svg>
       <h1>Saturday</h1>
 
-      <div>
-        <div class="pol">
-          <div>
-            <Sektion indhold={mainstageSaturday} stage="Main Stage" />
-          </div>
-          <div class="secondlawn_gap">
-            <Sektion indhold={secondstageSaturday} stage="Second Stage" />
+      <div class="pol">
+        <div>
+          <Sektion indhold={mainstageSaturday} stage="Main Stage" />
+        </div>
+        <div>
+          <Sektion indhold={secondstageSaturday} stage="Second Stage" />
+          <div class="onthelawntop">
             <Sektion indhold={onthelawnSaturday} stage="On The Lawn" />
           </div>
         </div>
+      </div>
 
-        <h1 class="h1_sunday">Sunday</h1>
-        <div class="pol">
-          <div>
-            <Sektion indhold={mainstageSunday} stage="Main Stage" />
-          </div>
-          <div class="secondlawn_gap">
-            <Sektion indhold={secondstageSunday} stage="Second Stage" />
+      <h1 class="h1_sunday">Sunday</h1>
+      <div class="pol">
+        <div>
+          <Sektion indhold={mainstageSunday} stage="Main Stage" />
+        </div>
 
+        <div>
+          <Sektion indhold={secondstageSunday} stage="Second Stage" />
+          <div class="onthelawntop">
             <Sektion indhold={onthelawnSunday} stage="On The Lawn" />
           </div>
         </div>
       </div>
     </main>
-    <Footer />
   </body>
+  <Footer />
 </html>
 
 <style>
   .h1_sunday {
-    padding-top: 5rem;
+    padding-top: 4rem;
+  }
+
+  .onthelawntop {
+    padding-top: 2rem;
   }
 
   .pol {
+    display: grid;
+    gap: 2rem;
     padding-bottom: 2rem;
   }
   @media (min-width: 1000px) {
