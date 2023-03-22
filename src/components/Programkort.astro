@@ -4,12 +4,14 @@ const { event, about, when, link, image } = Astro.props;
 
 <a href={link}>
   <article>
-    <div class="program">
-      <h3>{event}</h3>
-      <div class="right">
-        <p>{when}</p>
+    <div>
+      <div class="program">
+        <h3>{event}</h3>
+        <div class="right">
+          <p>{when}</p>
+        </div>
+        <p>{about}</p>
       </div>
-      <p>{about}</p>
     </div>
   </article>
 </a>
@@ -17,6 +19,7 @@ const { event, about, when, link, image } = Astro.props;
   article {
     padding: 2rem;
   }
+
   a {
     font-weight: var(--regular);
     font-size: var(--font-size-xxxs);
@@ -31,5 +34,10 @@ const { event, about, when, link, image } = Astro.props;
 
   .right {
     text-align: right;
+  }
+
+  h3:hover,
+  p:hover {
+    color: var(--tertiary-100);
   }
 </style>
