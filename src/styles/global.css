@@ -83,6 +83,7 @@ h1 {
   font-weight: var(--bold);
   text-align: center;
   text-transform: uppercase;
+  color: var(--secondary-80);
 }
 h4 {
   font-weight: var(--light);
