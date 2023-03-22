@@ -9,7 +9,7 @@ const { day, indhold, stage } = Astro.props;
 <div class="sektion_grid">
   <h2>{stage}</h2>
   <section>
-    {indhold.map((program) => <Programkort link={"/../undersider/" + program.id} imgPath={"/img/" + `${program.image}`} event={program.event} about={program.about} when={program.when} />)}
+    {indhold.map((program) => <Programkort link={"/../undersider/" + program.id} imgPath={"/img/" + `${program.image}`} stage={program.stage} event={program.event} about={program.about} when={program.when} />)}
   </section>
 </div>
 
