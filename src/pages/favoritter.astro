@@ -24,10 +24,11 @@ import Favorit from "../components/Favorit.astro";
     <main>
       <h1>SAVED EVENTS</h1>
       <article class="grid_1-1-1">
-        <Favorit title="Wadaiko" about="High powered drum show">
-          <img src="public/img/wadaiko.webp" alt="wadaiko" />
-        </Favorit>
+        <Favorit title="Wadaiko" about="High powered drum show" />
+        <Favorit title="Karate kids" about="Hard hitting martial arts" />
+        <Favorit title="Calligraphy" about="Ink painting with soul" />
       </article>
+      <img class="blomst" src="/svg/blomst.svg" alt="blomsticon" />
 
       <Footer />
     </main>
@@ -39,5 +40,20 @@ import Favorit from "../components/Favorit.astro";
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 40px;
+    gap: 30px;
+  }
+  h1 {
+    margin-top: 50px;
+  }
+  .blomst {
+    width: 100px;
+    margin: auto;
+  }
+  @media (min-width: 1000px) {
+    .blomst {
+      width: 200px;
+      margin-bottom: 40px;
+      margin-left: 40px;
+    }
   }
 </style>
