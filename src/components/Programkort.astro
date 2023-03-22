@@ -1,23 +1,35 @@
 ---
-const { event, association, when, link, image } = Astro.props;
+const { event, about, when, link, image } = Astro.props;
 ---
 
 <a href={link}>
-  <article class="program">
-    <div>
-      <h2>{event}</h2>
-      <p>{association}</p>
-      <p>{when}</p>
+  <article>
+    <div class="program">
+      <h3>{event}</h3>
+      <div class="right">
+        <p>{when}</p>
+      </div>
+      <p>{about}</p>
     </div>
   </article>
 </a>
 <style>
   article {
-    padding: 1rem;
+    padding: 2rem;
   }
   a {
     font-weight: var(--regular);
     font-size: var(--font-size-xxxs);
     color: var(--secondary-100);
+  }
+
+  .program {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .right {
+    text-align: right;
   }
 </style>

@@ -57,8 +57,8 @@ const { event } = Astro.props;
           <h3>{event.day}</h3>
           <h4>{event.when}</h4>
 
-          <p>{event.about}</p>
-          <h5>{event.lorem}</h5>
+          <h5>{event.about}</h5>
+          <p>{event.lorem}</p>
           <Button variant="tertiary" size="xxsmall">Go to website</Button>
         </div>
         <div>
@@ -80,6 +80,15 @@ const { event } = Astro.props;
 
   h5 {
     margin-bottom: 1rem;
+    font-weight: var(--regular);
+    font-size: var(--font-size-xxs);
+    color: var(--secondary-100);
+  }
+
+  h4 {
+    font-weight: var(--light);
+    font-size: var(--font-size-s);
+    color: var(--secondary-80);
   }
 
   h2 {
