@@ -1,14 +1,16 @@
 ---
-const { title, about } = Astro.props;
+const { title, about, time, stage } = Astro.props;
 import Button from "./Buttons.astro";
 ---
 
 <a href="program">
   <div class="card">
-    <article></article>
     <h2>{title}</h2>
-    <p>{about}</p>
-    <slot />
+    <h4>{about}</h4>
+    <div class="space">
+      <p>{time}</p>
+      <p class="stage">{stage}</p>
+    </div>
   </div>
 </a>
 
@@ -18,12 +20,23 @@ import Button from "./Buttons.astro";
     border-bottom-left-radius: var(--border-radius-box);
     border-top-right-radius: var(--border-radius-box);
     padding: 30px;
+    height: 300px;
   }
-
+  .space {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
   h2 {
     color: var(--primary-40);
   }
+  h4 {
+    color: var(--tertiary-40);
+    font-size: var(--font-size-xs);
+  }
   p {
     color: var(--primary-40);
+  }
+  .stage {
+    font-weight: var(--extralight);
   }
 </style>

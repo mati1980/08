@@ -24,9 +24,15 @@ import Favorit from "../components/Favorit.astro";
     <main>
       <h1>SAVED EVENTS</h1>
       <article class="grid_1-1-1">
-        <Favorit title="Wadaiko" about="High powered drum show" />
-        <Favorit title="Karate kids" about="Hard hitting martial arts" />
-        <Favorit title="Calligraphy" about="Ink painting with soul" />
+        <div class="box">
+          <Favorit title="Wadaiko" about="High powered drum show" time="Saturday 10:45-11:00" stage="Main Stage" />
+        </div>
+        <div class="box">
+          <Favorit title="Karate børn" about="Hard hitting martial arts" time="Saturday 12:00-12:15" stage="Main Stage" />
+        </div>
+        <div class="box">
+          <Favorit title="Calligraphy" about="Ink painting with soul" time="Saturday 12:30-13:30" stage="Second Stage" />
+        </div>
       </article>
       <img class="blomst" src="/svg/blomst.svg" alt="blomsticon" />
 
@@ -36,11 +42,8 @@ import Favorit from "../components/Favorit.astro";
 </html>
 
 <style>
-  .grid_1-1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 40px;
-    gap: 30px;
+  .box {
+    margin: 20px;
   }
   h1 {
     margin-top: 50px;
@@ -49,11 +52,16 @@ import Favorit from "../components/Favorit.astro";
     width: 100px;
     margin: auto;
   }
+
   @media (min-width: 1000px) {
     .blomst {
-      width: 200px;
-      margin-bottom: 40px;
-      margin-left: 40px;
+      width: 300px;
+      margin: auto;
+      padding: 30px;
+    }
+    .grid_1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 </style>
