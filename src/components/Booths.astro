@@ -4,8 +4,8 @@ const { category, name, about } = Astro.props;
 
 <article>
   <div class="hej">
-    <h2>{category}</h2>
-    <p>{name}</p>
+    <h3>{category}</h3>
+    <h2>{name}</h2>
     <p>{about}</p>
   </div>
 </article>
@@ -15,6 +15,7 @@ const { category, name, about } = Astro.props;
     background-color: var(--primary-40);
     border-radius: 0rem 2rem 0rem 2rem;
     padding: 2rem;
+    height: 250px;
   }
 
   .hej:hover {
