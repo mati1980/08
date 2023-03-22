@@ -97,10 +97,10 @@ import Eventcard from "../components/Eventcard.astro";
       </article>
       <h2 class="citat citat2">“People meet under the sakura trees”</h2>
       <h1>BOOTHS</h1>
-      <article class="grid_1-1">
+      <article class="grid_1-1 space">
         <div>
           <p>Try our many booths at the festival. There is everything from Japanese riceballs, to bonsai plants.</p>
-          <a class="mere_knap" href="../about"><Button variant="primary" size="small">Show booths</Button></a>
+          <a class="mere_knap" href="../booths"><Button variant="primary" size="small">Show booths</Button></a>
         </div>
         <img class="bod" src="public/svg/booth.svg" alt="BOOTHS" />
       </article>
@@ -112,6 +112,10 @@ import Eventcard from "../components/Eventcard.astro";
 <style>
   .free {
     margin: auto;
+  }
+  .space {
+    margin-top: 40px;
+    margin-bottom: 200px;
   }
   h1 {
     margin-top: 4rem;
@@ -154,6 +158,7 @@ import Eventcard from "../components/Eventcard.astro";
   }
   .bod {
     width: 200px;
+    margin: auto;
   }
   .citat,
   .citat2 {
