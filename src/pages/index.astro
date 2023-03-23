@@ -97,9 +97,10 @@ import Eventcard from "../components/Eventcard.astro";
       </article>
       <h2 class="citat citat2">“People meet under the sakura trees”</h2>
       <h1>BOOTHS</h1>
-      <article class="grid_1-1 space">
+      <article class="booth_grid">
+        <img class="blomst3" src="/svg/blomst.svg" alt="" />
         <div>
-          <p>Try our many booths at the festival. There is everything from Japanese riceballs, to bonsai plants.</p>
+          <p>Try our many booths at the festival. There is everything from Japanese riceballs, to bonsai plants. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a class="mere_knap" href="../booths"><Button variant="primary" size="small">Show booths</Button></a>
         </div>
         <img class="bod" src="/svg/booth.svg" alt="BOOTHS" />
@@ -112,10 +113,6 @@ import Eventcard from "../components/Eventcard.astro";
 <style>
   .free {
     margin: auto;
-  }
-  .space {
-    margin-top: 40px;
-    margin-bottom: 200px;
   }
   h1 {
     margin-top: 4rem;
@@ -148,10 +145,12 @@ import Eventcard from "../components/Eventcard.astro";
   .hide1 {
     display: none;
   }
-  .blomst2 {
+  .blomst2,
+  .blomst3 {
     display: none;
   }
-  .blomst {
+  .blomst,
+  .blomst3 {
     width: 200px;
     margin: auto;
     margin-bottom: 20px;
@@ -199,6 +198,17 @@ import Eventcard from "../components/Eventcard.astro";
   @media (min-width: 1300px) {
     .hide1 {
       display: block;
+    }
+    .blomst3 {
+      display: block;
+      transform: rotateY(180deg);
+    }
+    .booth_grid {
+      display: grid;
+      grid-template-columns: 200px 550px 200px;
+      gap: 30px;
+      margin: auto;
+      margin-bottom: 200px;
     }
   }
   @media (min-width: 1000px) {
